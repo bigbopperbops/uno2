@@ -850,7 +850,7 @@ function CMain(_0x5adff7) {
             s_iCntFps = 0x0;
         }
         if (_0x3ce991 === STATE_GAME) {
-            _0x3507f5[a0_0x1b8d('0x5fb')]();
+            _0x3507f5[a0_0x1b8d('0x5fb')]()
         }
         s_oStage[a0_0x1b8d('0x5fb')](_0x2b4d8d);
     };
