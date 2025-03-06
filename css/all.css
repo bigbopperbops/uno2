@@ -1,0 +1,942 @@
+/** 
+* Reset.css
+**/
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+blockquote,
+big,
+body,
+center,
+canvas,
+caption,
+cite,
+code,
+command,
+datalist,
+dd,
+del,
+details,
+dfn,
+dl,
+div,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+keygen,
+label,
+legend,
+li,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+s,
+samp,
+section,
+small,
+span,
+source,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+tfoot,
+thead,
+th,
+tr,
+tdvideo,
+tt,
+u,
+ul,
+var {
+    background: transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: top;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+table,
+table td {
+    padding: 0;
+    border: none;
+    border-collapse: collapse;
+}
+
+img {
+    vertical-align: top;
+}
+
+embed {
+    vertical-align: top;
+}
+
+/**
+* Main.css
+**/
+
+root {
+    display: block;
+}
+
+body {
+    background-color: #000000;
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input,
+input:before,
+input:after {
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+}
+
+::selection {
+    background: transparent;
+    color: inherit;
+}
+
+::-moz-selection {
+    background: transparent;
+    color: inherit;
+}
+
+#canvas {
+    position: fixed;
+}
+
+canvas {
+    -ms-touch-action: none;
+}
+
+.ani_hack {
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    /* mobile webkit */
+}
+
+/***************FONTS*******************/
+
+.check-fonts {
+    position: fixed;
+    opacity: 0;
+}
+
+.check-font-1 {
+    font-family: 'comfortaabold';
+}
+
+@font-face {
+    font-family: 'comfortaabold';
+    src: url('comfortaa-bold-webfont.woff2') format('woff2'), url('comfortaa-bold-webfont.woff') format('woff'), url('comfortaa-bold-webfont.svg#comfortaabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+* ctl-multiplayer-icons.css
+**/
+
+@font-face {
+    font-family: 'ctl-multiplayer-icons';
+    src: url('../font/ctl-multiplayer-icons.eot?98779393');
+    src: url('../font/ctl-multiplayer-icons.eot?98779393#iefix') format('embedded-opentype'), url('../font/ctl-multiplayer-icons.woff2?98779393') format('woff2'), url('../font/ctl-multiplayer-icons.woff?98779393') format('woff'), url('../font/ctl-multiplayer-icons.ttf?98779393') format('truetype'), url('../font/ctl-multiplayer-icons.svg?98779393#ctl-multiplayer-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'ctl-multiplayer-icons';
+    src: url('../font/ctl-multiplayer-icons.svg?98779393#ctl-multiplayer-icons') format('svg');
+  }
+}
+*/
+
+[class^="ctl-multiplayer-icons-"]:before,
+[class*=" ctl-multiplayer-icons-"]:before {
+    font-family: "ctl-multiplayer-icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.ctl-multiplayer-icons-lock:before {
+    content: '\e800';
+}
+
+/* '' */
+
+.ctl-multiplayer-icons-lock-open:before {
+    content: '\e801';
+}
+
+/* '' */
+
+.ctl-multiplayer-icons-block:before {
+    content: '\e802';
+}
+
+/* '' */
+
+.ctl-multiplayer-icons-arrows-cw:before {
+    content: '\e803';
+}
+
+/* '' */
+
+.ctl-multiplayer-icons-login:before {
+    content: '\e804';
+}
+
+/* '' */
+
+.ctl-multiplayer-icons-spin5:before {
+    content: '\e838';
+}
+
+/* '' */
+
+.ctl-multiplayer-icons-help:before {
+    content: '\f128';
+}
+
+/* '' */
+
+.ctl-multiplayer-icons-attention-alt:before {
+    content: '\f12a';
+}
+
+/* '' */
+
+/**
+* animation.css
+**/
+
+/*
+   Animation example, for spinners
+*/
+
+.animate-spin {
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+    display: inline-block;
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@-o-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@-ms-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+/**
+* ctl-multiplayer.css
+**/
+
+.ctl-multiplayer-icons-attention-alt {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+}
+
+.ctl-multiplayer-spinner-container {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctl-multiplayer-dlg-header h1 {
+    font-size: 26px;
+}
+
+.ctl-multiplayer-dlg-content * {
+    font-family: 'comfortaabold';
+}
+
+.tippy-content {
+    font-family: 'comfortaabold';
+}
+
+.ctl-multiplayer-form-group {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ctl-multiplayer-form-group p {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.ctl-multiplayer-inline-list li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.ctl-multiplayer-display-none {
+    display: none !important;
+}
+
+.ctl-multiplayer-inline-list input[type=radio] {
+    margin: 0px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.ctl-multiplayer-inline-list li span {
+    font-size: 14px;
+}
+
+.ctl-multiplayer-dlg-content label,
+.ctl-multiplayer-dlg-content p,
+.ctl-multiplayer-dlg-content a,
+.ctl-multiplayer-dlg-content h1 {
+    color: #fff;
+}
+
+.ctl-multiplayer-dlg-content input[type=number],
+.ctl-multiplayer-dlg-content input[type=text],
+.ctl-multiplayer-dlg-content input[type=password] {
+    color: #020202;
+}
+
+.ctl-multiplayer-dlg-content input[type=number],
+.ctl-multiplayer-dlg-content input[type=text],
+.ctl-multiplayer-dlg-content input[type=password],
+.ctl-multiplayer-dlg-content button {
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.ctl-multiplayer-dlg-content label {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.ctl-multiplayer-dlg-content input[type=number],
+.ctl-multiplayer-dlg-content input[type=text],
+.ctl-multiplayer-dlg-content input[type=password] {
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #aaa;
+}
+
+.ctl-multiplayer-dlg-content button {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.ctl-multiplayer-dlg-content button {
+    background-color: #31a8fd;
+}
+
+.ctl-multiplayer-dlg-content button:hover,
+.ctl-multiplayer-dlg-content button:active {
+    background-color: #0094ff;
+}
+
+.ctl-multiplayer-dlg-content button.ctl-multiplayer-btn-gray {
+    background-color: #c5c5c5;
+    color: #222;
+}
+
+.ctl-multiplayer-dlg-content button.ctl-multiplayer-btn-gray:hover,
+.ctl-multiplayer-dlg-content button.ctl-multiplayer-btn-gray:active {
+    background-color: #a5a4a4;
+}
+
+.ctl-multiplayer-dlg-content button:active {
+    top: 1px;
+}
+
+.ctl-multiplayer-dlg-content label,
+.ctl-multiplayer-dlg-content input[type=number],
+.ctl-multiplayer-dlg-content input[type=text],
+.ctl-multiplayer-dlg-content input[type=password] {
+    width: 100%;
+    display: block;
+}
+
+.ctl-multiplayer-dlg-content button:focus {
+    outline: 0;
+}
+
+.ctl-multiplayer-current-users {
+    position: absolute;
+    right: 25px;
+    top: 6px;
+    font-size: 10px;
+}
+
+button.ctl-multiplayer-mini {
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.ctl-multiplayer-dlg-wrapper,
+.ctl-multiplayer-dlg-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.ctl-multiplayer-dlg-block {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ctl-multiplayer-dlg-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    background: #000;
+    background-clip: padding-box;
+    /* !importanté */
+    border: solid 8px transparent;
+    /* !importanté */
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 15px 30px;
+}
+
+.ctl-multiplayer-dlg-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    margin: -8px;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    border: 2px solid #000;
+    background: linear-gradient(to bottom, #606060, #222222);
+    box-shadow: 0px 5px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.ctl-multiplayer-dlg-content button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    margin: -4px;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    border: 1px solid #000;
+    background: linear-gradient(to bottom, #606060, #222222);
+}
+
+.ctl-multiplayer-dlg-content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0px;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    background: #0e0e0e;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 1) inset, 0px -1px 0px 0px rgba(255, 255, 255, 1) inset;
+}
+
+.ctl-multiplayer-dlg-content button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0px;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    background: #000;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 1) inset, 0px -1px 0px 0px rgba(255, 255, 255, 1) inset;
+}
+
+.ctl-multiplayer-dlg-content-body {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+    min-height: 50px;
+}
+
+.ctl-multiplayer-room-list {
+    margin-top: 15px;
+}
+
+.ctl-multiplayer-dlg-footer {
+    text-align: center;
+}
+
+.ctl-multiplayer-dlg-footer {
+    margin-left: -3px;
+    margin-right: -3px;
+}
+
+.ctl-multiplayer-dlg-footer button {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.ctl-multiplayer-list {
+    border: 1px solid #aaa;
+    max-height: 300px;
+    min-height: 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.ctl-multiplayer-list li {
+    padding: 5px;
+    font-size: 12px;
+    position: relative;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.ctl-multiplayer-list li i {
+    position: absolute;
+    right: 5px;
+    font-size: 12px;
+    color: #d10101;
+}
+
+.ctl-multiplayer-list li i.ctl-multiplayer-icons-login {
+    color: #3ebe09;
+}
+
+.ctl-multiplayer-list li i.ctl-multiplayer-icons-lock {
+    color: #007fda;
+}
+
+.ctl-multiplayer-list li:nth-child(odd) {
+    background-color: #3e3e3e;
+}
+
+.ctl-multiplayer-list li:hover {
+    color: #fff;
+    background-color: #007fda;
+}
+
+.ctl-multiplayer-list li:hover>i {
+    color: #fff;
+}
+
+.ctl-multiplayer-user-list {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.ctl-multiplayer-room-info {
+    font-size: 11px;
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.ctl-multiplayer-align-center {
+    text-align: center;
+}
+
+.ctl-multiplayer-align-v-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctl-multiplayer-update {
+    width: 100%;
+    font-size: 11px !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ctl-multiplayer-center {
+    text-align: center;
+}
+
+.ctl-multiplayer-copyright {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.ctl-multiplayer-copyright a {
+    font-size: 11px;
+    line-height: 11px;
+    text-decoration: none;
+    display: block;
+}
+
+.ctl-multiplayer-copyright a:visited {}
+
+.ctl-multiplayer-copyright a:hover,
+.ctl-multiplayer-copyright a:active {
+    color: #99cc00;
+}
+
+.ctl-multiplayer-room-link {
+    margin-top: 15px;
+    font-size: 12px !important;
+}
+
+.ctl-multiplayer-room-name {
+    margin-left: 15px;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+
+@media screen and (max-width: 992px) {
+    .ctl-multiplayer-dlg-content {
+        width: 70%;
+    }
+    button.ctl-multiplayer-mini {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ctl-multiplayer-dlg-content {
+        width: calc(100%-30px);
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .ctl-multiplayer-dlg-header h1 {
+        font-size: 20px;
+    }
+    .ctl-multiplayer-dlg-content {
+        padding: 10px 30px;
+    }
+    .ctl-multiplayer-dlg-content-body {
+        max-height: calc(100vh - 160px);
+    }
+    .ctl-multiplayer-form-group label {
+        width: 30%;
+        display: inline-block;
+    }
+    .ctl-multiplayer-form-content {
+        width: 70%;
+        display: inline-block;
+    }
+}
+
+/**
+* orientation_utils.css
+**/
+
+.orientation-msg-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background-color: #000;
+}
+
+.orientation-msg-text {
+    font-size: 40px;
+    font-family: "Arial";
+    color: #fff;
+    text-align: center;
+    width: 80%;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translate(15%, -50%);
+    -moz-transform: translate(15%, -50%);
+    -ms-transform: translate(15%, -50%);
+    transform: translate(15%, -50%);
+}
+
+@media (max-width: 767px) {
+    .orientation-msg-text {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .orientation-msg-text {
+        font-size: 30px;
+    }
+}
+
+/**
+* ios_fullscreen.css
+**/
+
+body {
+    background-color: #000 !important;
+}
+
+/*ios fullscreen*/
+
+.xxx-game-iframe-iphone-se {
+    height: 226px !important;
+}
+
+.xxx-ios-fullscreen-message {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.xxx-ios-fullscreen-scroll {
+    width: 100vw;
+    height: 120vh;
+    position: absolute;
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    display: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.xxx-ios-fullscreen-swipe {
+    width: 30%;
+    height: 30%;
+    background-image: url(../sprites/swipe.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate( -50%, -50%) !important;
+    -webkit-transform: translate( -50%, -50%) !important;
+    transform: translate( -50%, -50%) !important;
+    animation: xxx-animation-ios-swipe 1.5s ease infinite;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+@keyframes xxx-animation-ios-swipe {
+    0%,
+    100% {
+        top: 40%;
+    }
+    50% {
+        top: 60%;
+    }
+}
